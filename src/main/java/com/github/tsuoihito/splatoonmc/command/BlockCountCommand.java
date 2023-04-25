@@ -67,11 +67,11 @@ public class BlockCountCommand implements TabExecutor {
                 String player = args[1];
                 String material = args[2];
                 String fromX = args[3];
-                String fromY = args[3];
-                String fromZ = args[3];
-                String toX = args[3];
-                String toY = args[3];
-                String toZ = args[3];
+                String fromY = args[4];
+                String fromZ = args[5];
+                String toX = args[6];
+                String toY = args[7];
+                String toZ = args[8];
 
                 BlockCountUtil.saveCountToScoreboard(
                     plugin,
