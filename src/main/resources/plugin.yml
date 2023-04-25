@@ -1,0 +1,11 @@
+name: SplatoonMC
+version: '${project.version}'
+main: com.github.tsuoihito.splatoonmc.SplatoonMC
+api-version: 1.19
+authors: [ tsuoihito ]
+commands:
+  blockcount:
+    permission: splatoonmc.command.blockcount
+permissions:
+  splatoonmc.comamnd.blockcount:
+    default: op
