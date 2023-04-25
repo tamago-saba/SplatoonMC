@@ -6,6 +6,8 @@ authors: [ tsuoihito ]
 commands:
   blockcount:
     permission: splatoonmc.command.blockcount
+    usage: |
+      /<command> OBJECT PLAYER MATERIAL FROM_X FROM_Y FROM_Z TO_X TO_Y TO_Z
 permissions:
   splatoonmc.comamnd.blockcount:
     default: op
