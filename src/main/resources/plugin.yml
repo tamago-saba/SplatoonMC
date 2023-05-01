@@ -7,7 +7,19 @@ commands:
   blockcount:
     permission: splatoonmc.command.blockcount
     usage: |
-      /<command> OBJECT PLAYER MATERIAL FROM_X FROM_Y FROM_Z TO_X TO_Y TO_Z
+      /<command> OBJECT_NAME ENTRY MATERIAL FROM_X FROM_Y FROM_Z TO_X TO_Y TO_Z
+  nokorijikan:
+    permission: splatoonmc.command.nokorijikan
+    usage: |
+      <command> OBJECT ENTRY
+  kekka:
+    permission: splatoonmc.command.kekka
+    usage: |
+      <command> OBJECT_NAME_M ENTRY_M OBJECT_NAME_P ENTRY_P
 permissions:
   splatoonmc.comamnd.blockcount:
+    default: op
+  splatoonmc.command.nokorijikan:
+    default: op
+  splatoonmc.command.kekka:
     default: op
