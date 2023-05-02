@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.listener;
+package net.nutchi.splatoonmc.listener;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
@@ -6,9 +6,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
-import com.github.tsuoihito.splatoonmc.util.Fude;
-import com.github.tsuoihito.splatoonmc.util.ScoreboardUtil;
+import net.nutchi.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.util.Fude;
+import net.nutchi.splatoonmc.util.ScoreboardUtil;
 
 public class PlayerListener implements Listener {
     private final SplatoonMC plugin;

@@ -1,13 +1,12 @@
-package com.github.tsuoihito.splatoonmc;
+package net.nutchi.splatoonmc;
 
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import com.github.tsuoihito.splatoonmc.command.BlockCountCommand;
-import com.github.tsuoihito.splatoonmc.command.KekkaCommand;
-import com.github.tsuoihito.splatoonmc.command.NokorijikanCommand;
-import com.github.tsuoihito.splatoonmc.listener.PlayerListener;
-import com.github.tsuoihito.splatoonmc.listener.SnowballListener;
+import net.nutchi.splatoonmc.command.BlockCountCommand;
+import net.nutchi.splatoonmc.command.KekkaCommand;
+import net.nutchi.splatoonmc.command.NokorijikanCommand;
+import net.nutchi.splatoonmc.listener.PlayerListener;
+import net.nutchi.splatoonmc.listener.SnowballListener;
 
 public final class SplatoonMC extends JavaPlugin {
     @Override

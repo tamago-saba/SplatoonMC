@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.util;
+package net.nutchi.splatoonmc.util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,12 +9,12 @@ import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
-import com.github.tsuoihito.splatoonmc.model.SplatoonTeam;
+import net.nutchi.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.model.SplatoonTeam;
 
 public class ScoreboardUtil {
     public static int getScore(SplatoonMC plugin, String objectName, String entry) {
-        return getScoreboardScore(plugin, objectName, entry).map(s -> s.getScore()).orElse(0);
+        return getScoreboardScore(plugin, objectName, entry).map(Score::getScore).orElse(0);
     }
 
     public static void setScore(SplatoonMC plugin, String objectName, String entry, int score) {
@@ -40,7 +40,7 @@ public class ScoreboardUtil {
     }
 
     public static List<String> getObjectNames(SplatoonMC plugin) {
-        return getScoreboard(plugin).map(sb -> sb.getObjectives().stream().map(o -> o.getName())
+        return getScoreboard(plugin).map(sb -> sb.getObjectives().stream().map(Objective::getName)
                 .collect(Collectors.toList())).orElse(new ArrayList<>());
     }
 

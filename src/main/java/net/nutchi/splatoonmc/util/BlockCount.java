@@ -1,9 +1,9 @@
-package com.github.tsuoihito.splatoonmc.util;
+package net.nutchi.splatoonmc.util;
 
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.SplatoonMC;
 
 public class BlockCount {
     public static void saveCountToScoreboard(SplatoonMC plugin, String objectName, String entry,

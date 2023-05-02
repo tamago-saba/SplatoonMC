@@ -1,6 +1,6 @@
 name: SplatoonMC
 version: '${project.version}'
-main: com.github.tsuoihito.splatoonmc.SplatoonMC
+main: net.nutchi.splatoonmc.SplatoonMC
 api-version: 1.19
 authors: [ tsuoihito ]
 commands:

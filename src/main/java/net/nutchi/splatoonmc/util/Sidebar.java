@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.util;
+package net.nutchi.splatoonmc.util;
 
 import java.util.Optional;
 import org.bukkit.ChatColor;
@@ -6,7 +6,7 @@ import org.bukkit.scoreboard.Criteria;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.SplatoonMC;
 
 public class Sidebar {
     public static void showNokorijikanScoreboard(SplatoonMC plugin, String objectName,

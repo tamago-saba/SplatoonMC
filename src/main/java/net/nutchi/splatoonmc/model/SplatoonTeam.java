@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.model;
+package net.nutchi.splatoonmc.model;
 
 public enum SplatoonTeam {
     PINK,

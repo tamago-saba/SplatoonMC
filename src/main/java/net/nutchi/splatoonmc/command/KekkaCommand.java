@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.command;
+package net.nutchi.splatoonmc.command;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
-import com.github.tsuoihito.splatoonmc.util.Sidebar;
+import net.nutchi.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.util.Sidebar;
 
 public class KekkaCommand implements TabExecutor {
     private final SplatoonMC plugin;

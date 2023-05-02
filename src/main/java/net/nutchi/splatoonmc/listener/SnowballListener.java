@@ -1,13 +1,13 @@
-package com.github.tsuoihito.splatoonmc.listener;
+package net.nutchi.splatoonmc.listener;
 
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ProjectileHitEvent;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
-import com.github.tsuoihito.splatoonmc.model.SplatoonTeam;
-import com.github.tsuoihito.splatoonmc.util.ScoreboardUtil;
+import net.nutchi.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.model.SplatoonTeam;
+import net.nutchi.splatoonmc.util.ScoreboardUtil;
 
 public class SnowballListener implements Listener {
     private final SplatoonMC plugin;

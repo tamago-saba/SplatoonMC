@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.command;
+package net.nutchi.splatoonmc.command;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,9 +12,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
-
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
-import com.github.tsuoihito.splatoonmc.util.BlockCount;
+import net.nutchi.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.util.BlockCount;
 
 public class BlockCountCommand implements TabExecutor {
     private final SplatoonMC plugin;

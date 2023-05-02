@@ -1,4 +1,4 @@
-package com.github.tsuoihito.splatoonmc.util;
+package net.nutchi.splatoonmc.util;
 
 import java.util.Optional;
 import org.bukkit.Location;
@@ -6,7 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
-import com.github.tsuoihito.splatoonmc.SplatoonMC;
+import net.nutchi.splatoonmc.SplatoonMC;
 
 public class Fude {
     public static void fillMyColor(SplatoonMC plugin, Player player) {
