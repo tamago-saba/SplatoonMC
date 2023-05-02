@@ -2,7 +2,7 @@ name: SplatoonMC
 version: '${project.version}'
 main: net.nutchi.splatoonmc.SplatoonMC
 api-version: 1.19
-authors: [ tsuoihito ]
+authors: [ Nutchi ]
 commands:
   blockcount:
     permission: splatoonmc.command.blockcount
