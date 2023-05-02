@@ -19,13 +19,14 @@ public class PlayerListener implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.getHand().equals(EquipmentSlot.HAND)
+        if (event.getHand() == EquipmentSlot.HAND
                 && (event.getAction().equals(Action.LEFT_CLICK_AIR)
                         || event.getAction().equals(Action.LEFT_CLICK_BLOCK))) {
             ScoreboardUtil.increaseScore(plugin, "left_click", event.getPlayer().getName());
 
-            if (event.getPlayer().getInventory().getItemInMainHand().getType()
-                    .equals(Material.DIAMOND_SHOVEL)) {
+            Material itemType = event.getPlayer().getInventory().getItemInMainHand().getType();
+            if (itemType.equals(Material.DIAMOND_SHOVEL)
+                    || itemType.equals(Material.DIAMOND_PICKAXE)) {
                 Fude.fillMyColor(plugin, event.getPlayer());
             }
         }

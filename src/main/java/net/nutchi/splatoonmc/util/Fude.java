@@ -12,7 +12,7 @@ public class Fude {
     public static void fillMyColor(SplatoonMC plugin, Player player) {
         Location loc = player.getEyeLocation();
         Vector dir = loc.getDirection();
-        Location base = loc.add(dir.multiply(2));
+        Location base = loc.add(dir.multiply(3));
 
         int distance = 2;
 
