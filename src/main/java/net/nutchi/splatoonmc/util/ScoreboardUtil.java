@@ -27,16 +27,7 @@ public class ScoreboardUtil {
 
     private static Optional<Score> getScoreboardScore(SplatoonMC plugin, String objectName,
             String entry) {
-        return getScoreboard(plugin).flatMap(sb -> getScoreboardScore(sb, objectName, entry));
-    }
-
-    private static Optional<Score> getScoreboardScore(Scoreboard scoreboard, String objectName,
-            String entry) {
-        Objective objective = scoreboard.getObjective(objectName);
-        if (objective != null) {
-            return Optional.of(objective.getScore(entry));
-        }
-        return Optional.empty();
+        return getObjective(plugin, objectName).map(o -> o.getScore(entry));
     }
 
     public static List<String> getObjectNames(SplatoonMC plugin) {
@@ -61,11 +52,13 @@ public class ScoreboardUtil {
         return Optional.empty();
     }
 
+    public static Optional<Objective> getObjective(SplatoonMC plugin, String objectName) {
+        return getScoreboard(plugin)
+                .flatMap(sb -> Optional.ofNullable(sb.getObjective(objectName)));
+    }
+
     public static Optional<Scoreboard> getScoreboard(SplatoonMC plugin) {
-        ScoreboardManager manager = plugin.getServer().getScoreboardManager();
-        if (manager != null) {
-            return Optional.of(manager.getMainScoreboard());
-        }
-        return Optional.empty();
+        return Optional.ofNullable(plugin.getServer().getScoreboardManager())
+                .map(ScoreboardManager::getMainScoreboard);
     }
 }

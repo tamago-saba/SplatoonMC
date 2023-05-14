@@ -11,11 +11,15 @@ commands:
   nokorijikan:
     permission: splatoonmc.command.nokorijikan
     usage: |
-      <command> OBJECT ENTRY
+      /<command> OBJECT_NAME ENTRY
   kekka:
     permission: splatoonmc.command.kekka
     usage: |
-      <command> OBJECT_NAME_M ENTRY_M OBJECT_NAME_P ENTRY_P
+      /<command> OBJECT_NAME_M ENTRY_M OBJECT_NAME_P ENTRY_P
+  sidebar:
+    permission: splatoonmc.command.sidebar
+    usage: |
+      /<command> OBJECT_NAME TAG
 permissions:
   splatoonmc.comamnd.blockcount:
     default: op

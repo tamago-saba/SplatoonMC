@@ -3,6 +3,7 @@ package net.nutchi.splatoonmc;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import net.nutchi.splatoonmc.command.BlockCountCommand;
+import net.nutchi.splatoonmc.command.CustomSidebarCommand;
 import net.nutchi.splatoonmc.command.KekkaCommand;
 import net.nutchi.splatoonmc.command.NokorijikanCommand;
 import net.nutchi.splatoonmc.listener.PlayerListener;
@@ -17,6 +18,7 @@ public final class SplatoonMC extends JavaPlugin {
         getCommand("blockcount").setExecutor(new BlockCountCommand(this));
         getCommand("nokorijikan").setExecutor(new NokorijikanCommand(this));
         getCommand("kekka").setExecutor(new KekkaCommand(this));
+        getCommand("sidebar").setExecutor(new CustomSidebarCommand(this));
     }
 
     @Override

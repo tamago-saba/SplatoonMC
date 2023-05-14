@@ -1,7 +1,9 @@
 package net.nutchi.splatoonmc.util;
 
 import java.util.Optional;
+import java.util.UUID;
 import org.bukkit.ChatColor;
+import org.bukkit.Nameable;
 import org.bukkit.scoreboard.Criteria;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
@@ -78,5 +80,51 @@ public class Sidebar {
 
             return scoreboard;
         });
+    }
+
+    public static void showCustomSidebar(SplatoonMC plugin, String objectName, String tag) {
+        plugin.getServer().getOnlinePlayers()
+                .forEach(p -> createCustomSidebarScoreboard(plugin, objectName, tag)
+                        .ifPresent(sb -> p.setScoreboard(sb)));
+    }
+
+    private static Optional<Scoreboard> createCustomSidebarScoreboard(SplatoonMC plugin,
+            String objectName, String tag) {
+        return ScoreboardUtil.getScoreboard(plugin).map(scoreboard -> {
+            String sideBarObjectName = "splatoonplugin_entity_name_sidebar";
+            scoreboard.getObjectives().forEach(o -> {
+                if (o.getName().equals(sideBarObjectName)) {
+                    o.unregister();
+                }
+            });
+
+            Objective sidebarObjective =
+                    scoreboard.registerNewObjective(sideBarObjectName, Criteria.DUMMY, "");
+            sidebarObjective.setDisplaySlot(DisplaySlot.SIDEBAR);
+            ScoreboardUtil.getObjective(plugin, objectName)
+                    .ifPresent(o -> sidebarObjective.setDisplayName(o.getDisplayName()));
+
+            ScoreboardUtil.getScoreboard(plugin).ifPresent(sb -> sb.getEntries()
+                    .forEach(e -> getNameOfEntityForSidebar(plugin, e, tag).ifPresent(n -> Optional
+                            .ofNullable(sb.getObjective(objectName)).ifPresent(o -> sidebarObjective
+                                    .getScore(n).setScore(o.getScore(e).getScore())))));
+
+            return scoreboard;
+        });
+    }
+
+    private static Optional<String> getNameOfEntityForSidebar(SplatoonMC plugin, String name,
+            String tag) {
+        return getUuidFromString(name).flatMap(uuid -> Optional
+                .ofNullable(plugin.getServer().getEntity(uuid))
+                .filter(e -> e.getScoreboardTags().contains(tag)).map(Nameable::getCustomName));
+    }
+
+    private static Optional<UUID> getUuidFromString(String name) {
+        try {
+            return Optional.of(UUID.fromString(name));
+        } catch (IllegalArgumentException e) {
+            return Optional.empty();
+        }
     }
 }
