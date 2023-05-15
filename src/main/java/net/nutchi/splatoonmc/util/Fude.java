@@ -16,7 +16,7 @@ public class Fude {
             Location loc = player.getEyeLocation();
             Vector dir = loc.getDirection();
 
-            for (int i = 2; i <= 5; i++) {
+            for (int i = 2; i <= 6; i++) {
                 Location base = loc.clone().add(dir.clone().multiply(i));
                 Block baseBlock = base.getBlock();
 
@@ -55,7 +55,7 @@ public class Fude {
 
             }
 
-            ScoreboardUtil.setScore(plugin, coolTimeObject, player.getName(), 20);
+            ScoreboardUtil.setScore(plugin, coolTimeObject, player.getName(), 15);
         }
     }
 
